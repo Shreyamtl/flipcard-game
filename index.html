@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flip Surprise Game</title>
+   <style>
+    body {
+        background: #222;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: 500px;
+        height: 250px;
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        border-radius: 10px;
+    }
+
+    .card-front {
+        background: rgb(183, 41, 222);
+        font-size: 2rem;
+    }
+
+    .card-back {
+        background: green;
+        transform: rotateY(180deg);
+    }
+</style>
+</head>
+<body>
+    <h1>Guess Before You Flip </h1>
+    <div class="container">
+        
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What has to be broken before you can use it?</div>
+                <div class="card-back">Egg 🥚</div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">I’m tall when I’m young, and short when I’m old. What am I?</div>
+                <div class="card-back">Candle 🕯️</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">The more of me you take, the more you leave behind. What am I</div>
+                <div class="card-back"> Footsteps 👣</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
