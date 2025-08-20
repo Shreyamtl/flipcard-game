@@ -1,1 +1,1 @@
-A simple flip-card riddle game.
+This is a readme file
